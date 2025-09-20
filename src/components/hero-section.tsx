@@ -10,10 +10,10 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-surface">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full blur-xl animate-float" />
-        <div className="absolute top-40 right-20 w-24 h-24 bg-emergency/20 rounded-full blur-xl animate-float float-animation-delayed" />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-secondary-brand/20 rounded-full blur-xl animate-float" />
+        <div className="absolute top-40 right-20 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-float float-animation-delayed" />
         <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-success/20 rounded-full blur-xl animate-float" />
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-primary/30 rounded-full blur-xl float-animation-delayed" />
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-secondary-brand/30 rounded-full blur-xl float-animation-delayed" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -33,9 +33,9 @@ export function HeroSection() {
         </div>
 
         <div className="animate-slide-up-3">
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Empowering Punjab's students with interactive disaster maps, gamified learning, 
-            virtual drills, and life-saving emergency tools - all in one intelligent platform.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+            Punjab's most comprehensive disaster preparedness platform - combining interactive risk mapping, 
+            gamified safety education, virtual emergency drills, and life-saving tools for students across the state.
           </p>
         </div>
 
@@ -62,23 +62,23 @@ export function HeroSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in">
           <div className="glass-card p-6 rounded-2xl hover-glow">
             <Map className="h-8 w-8 text-primary mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Interactive Maps</h3>
-            <p className="text-sm text-muted-foreground">Region-specific disaster mapping</p>
+            <h3 className="font-semibold mb-2">Punjab Risk Maps</h3>
+            <p className="text-sm text-muted-foreground">Localized disaster intelligence</p>
           </div>
           <div className="glass-card p-6 rounded-2xl hover-glow">
-            <Zap className="h-8 w-8 text-emergency mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Emergency Tools</h3>
-            <p className="text-sm text-muted-foreground">SOS alerts & safety guidance</p>
+            <Zap className="h-8 w-8 text-secondary-brand mx-auto mb-3" />
+            <h3 className="font-semibold mb-2">Emergency Response</h3>
+            <p className="text-sm text-muted-foreground">Instant SOS & voice guidance</p>
           </div>
           <div className="glass-card p-6 rounded-2xl hover-glow">
             <Users className="h-8 w-8 text-success mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Gamified Learning</h3>
-            <p className="text-sm text-muted-foreground">Badges, quizzes & leaderboards</p>
+            <h3 className="font-semibold mb-2">Smart Learning</h3>
+            <p className="text-sm text-muted-foreground">Gamified safety education</p>
           </div>
           <div className="glass-card p-6 rounded-2xl hover-glow">
-            <Shield className="h-8 w-8 text-primary mx-auto mb-3" />
+            <Shield className="h-8 w-8 text-emergency mx-auto mb-3" />
             <h3 className="font-semibold mb-2">Virtual Drills</h3>
-            <p className="text-sm text-muted-foreground">Practice emergency responses</p>
+            <p className="text-sm text-muted-foreground">Real-time practice scenarios</p>
           </div>
         </div>
 

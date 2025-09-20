@@ -18,20 +18,25 @@
     --popover: 240 10% 100%;
     --popover-foreground: 240 10% 15%;
 
-    /* Brand Primary - Deep Purple/Blue */
-    --primary: 256 100% 60%;
+    /* Brand Primary - Ocean Blue */
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 256 100% 75%;
+    --primary-glow: 210 100% 65%;
 
-    /* Emergency Alert - Orange/Red */
-    --emergency: 15 100% 60%;
+    /* Secondary - Teal/Cyan */
+    --secondary-brand: 180 100% 45%;
+    --secondary-brand-foreground: 0 0% 98%;
+    --secondary-brand-glow: 180 100% 60%;
+
+    /* Emergency Alert - Coral/Orange (softer) */
+    --emergency: 20 85% 55%;
     --emergency-foreground: 0 0% 98%;
-    --emergency-glow: 15 100% 75%;
+    --emergency-glow: 20 85% 70%;
 
-    /* Safety Success - Green */
-    --success: 142 72% 50%;
+    /* Safety Success - Emerald Green */
+    --success: 160 75% 45%;
     --success-foreground: 0 0% 98%;
-    --success-glow: 142 72% 65%;
+    --success-glow: 160 75% 60%;
 
     /* Secondary Surfaces */
     --secondary: 240 5% 96%;
@@ -57,11 +62,13 @@
     /* Border Radius */
     --radius: 0.75rem;
 
-    /* Beautiful Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    /* Beautiful Blue-Green Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary-brand)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary-brand)), hsl(var(--secondary-brand-glow)));
     --gradient-emergency: linear-gradient(135deg, hsl(var(--emergency)), hsl(var(--emergency-glow)));
     --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--emergency)) 50%, hsl(var(--success)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-brand)) 50%, hsl(var(--success)) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(180 100% 40%) 50%, hsl(160 75% 40%) 100%);
     --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
     /* Elegant Shadows */
@@ -104,20 +111,25 @@
     --popover: 240 10% 12%;
     --popover-foreground: 240 5% 90%;
 
-    /* Brand Primary - Bright in Dark */
-    --primary: 256 100% 70%;
+    /* Brand Primary - Bright Ocean Blue in Dark */
+    --primary: 210 100% 65%;
     --primary-foreground: 240 10% 8%;
-    --primary-glow: 256 100% 85%;
+    --primary-glow: 210 100% 80%;
 
-    /* Emergency Alert - Bright Orange in Dark */
-    --emergency: 15 100% 65%;
+    /* Secondary - Bright Teal in Dark */
+    --secondary-brand: 180 100% 60%;
+    --secondary-brand-foreground: 240 10% 8%;
+    --secondary-brand-glow: 180 100% 75%;
+
+    /* Emergency Alert - Bright Coral in Dark */
+    --emergency: 20 85% 65%;
     --emergency-foreground: 240 10% 8%;
-    --emergency-glow: 15 100% 80%;
+    --emergency-glow: 20 85% 80%;
 
-    /* Safety Success - Bright Green in Dark */
-    --success: 142 72% 55%;
+    /* Safety Success - Bright Emerald in Dark */
+    --success: 160 75% 60%;
     --success-foreground: 240 10% 8%;
-    --success-glow: 142 72% 70%;
+    --success-glow: 160 75% 75%;
 
     /* Secondary Surfaces - Dark */
     --secondary: 240 8% 16%;
@@ -140,11 +152,13 @@
     --input: 240 8% 20%;
     --ring: 256 100% 70%;
 
-    /* Enhanced Gradients for Dark Mode */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    /* Enhanced Blue-Green Gradients for Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary-brand)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary-brand)), hsl(var(--secondary-brand-glow)));
     --gradient-emergency: linear-gradient(135deg, hsl(var(--emergency)), hsl(var(--emergency-glow)));
     --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--emergency)) 50%, hsl(var(--success)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-brand)) 50%, hsl(var(--success)) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(210 100% 60%) 0%, hsl(180 100% 55%) 50%, hsl(160 75% 55%) 100%);
     --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
     /* Enhanced Shadows for Dark Mode */
@@ -203,7 +217,7 @@
 
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-emergency to-success bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-secondary-brand to-success bg-clip-text text-transparent;
   }
 
   /* Interactive Hover Effects */

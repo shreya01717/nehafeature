@@ -22,7 +22,7 @@ export default function Auth() {
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-40 h-40 bg-primary/10 rounded-full blur-2xl animate-float" />
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-emergency/10 rounded-full blur-2xl float-animation-delayed" />
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-secondary-brand/10 rounded-full blur-2xl float-animation-delayed" />
       </div>
 
       {/* Navigation */}
@@ -36,10 +36,10 @@ export default function Auth() {
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <div className="flex items-center space-x-2">
-          <div className="p-2 bg-gradient-primary rounded-lg">
+          <div className="p-2 bg-gradient-ocean rounded-lg">
             <Shield className="h-5 w-5 text-white" />
           </div>
-          <span className="font-bold gradient-text">RakshakApp</span>
+          <span className="font-bold bg-gradient-to-r from-primary to-secondary-brand bg-clip-text text-transparent">RakshakApp</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ export default function Auth() {
       {/* Auth Form */}
       <Card className="w-full max-w-md glass-card animate-slide-up relative z-10">
         <CardHeader className="text-center pb-8">
-          <div className="mx-auto mb-4 p-3 bg-gradient-primary rounded-2xl w-fit">
+          <div className="mx-auto mb-4 p-3 bg-gradient-ocean rounded-2xl w-fit">
             <Shield className="h-8 w-8 text-white" />
           </div>
           <CardTitle className="text-2xl font-bold">
