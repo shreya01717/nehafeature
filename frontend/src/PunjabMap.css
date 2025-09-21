@@ -1,0 +1,142 @@
+/* src/components/PunjabMap.css */
+.map-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #0f1724; /* dark page background like your dashboard */
+    color: #e6eef8;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  
+  .map-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  }
+  .map-header h1 {
+    margin: 0;
+    color: #e6eef8;
+    font-size: 20px;
+  }
+  .map-header .muted {
+    margin-top: 6px;
+    color: #9aa6b2;
+    font-size: 13px;
+  }
+  
+  .map-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  /* Side panel */
+  .side-panel {
+    width: 300px;
+    background: #0b1220;
+    border-right: 1px solid rgba(255,255,255,0.03);
+    padding: 18px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .side-panel h2.district-title {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .tags-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    padding: 6px 8px;
+    border-radius: 999px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .desc {
+    margin-top: 10px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .risk-gradient {
+    position: relative;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(to right, #16a34a 0%, #f59e0b 50%, #ef4444 100%);
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .risk-marker {
+    position: absolute;
+    top: -4px;
+    width: 8px;
+    height: 18px;
+    background: #0f1724;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  }
+  .risk-label {
+    margin-top: 6px;
+    color: #cbd5e1;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .tip {
+    margin-top: 10px;
+    color: #9aa6b2;
+    font-size: 13px;
+    font-style: italic;
+  }
+  
+  .primary-btn {
+    background: linear-gradient(90deg,#06b6d4,#7c3aed);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  /* Map wrapper */
+  .map-wrapper {
+    flex: 1;
+    position: relative;
+  }
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    background: #e6eef8;
+  }
+  
+  /* district paths */
+  .district-path {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .district-pulse {
+    animation: pulse 1.4s infinite;
+  }
+  @keyframes pulse {
+    0% { stroke-opacity: 0.9; }
+    50% { stroke-opacity: 0.35; }
+    100% { stroke-opacity: 0.9; }
+  }
+  
+  /* additional helper */
+  .link-btn {
+    background: transparent;
+    color: #93c5fd;
+    border: 1px solid rgba(255,255,255,0.03);
+    padding: 6px 8px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+  }

@@ -1,0 +1,178 @@
+{
+    "Amritsar": {
+      "riskLevel": "High",
+      "riskIntensity": "80%",
+      "riskDescription": "Flood-prone district with recurring monsoon issues.",
+      "preparednessScore": 60,
+      "riskTags": ["Flood"],
+      "safetyTip": "Move to higher ground during heavy rainfall."
+    },
+    "Barnala": {
+      "riskLevel": "Medium",
+      "riskIntensity": "50%",
+      "riskDescription": "Industrial and factory safety risks.",
+      "preparednessScore": 65,
+      "riskTags": ["Industrial"],
+      "safetyTip": "Ensure PPE compliance at all times."
+    },
+    "Bathinda": {
+      "riskLevel": "High",
+      "riskIntensity": "75%",
+      "riskDescription": "Chemical plants increase accident risks.",
+      "preparednessScore": 55,
+      "riskTags": ["Industrial", "Chemical"],
+      "safetyTip": "Know emergency exit routes in chemical zones."
+    },
+    "Faridkot": {
+      "riskLevel": "Medium",
+      "riskIntensity": "55%",
+      "riskDescription": "Seasonal flood threats.",
+      "preparednessScore": 70,
+      "riskTags": ["Flood"],
+      "safetyTip": "Identify nearest shelters in advance."
+    },
+    "FatehgarhSahib": {
+      "riskLevel": "Low",
+      "riskIntensity": "25%",
+      "riskDescription": "General preparedness risks.",
+      "preparednessScore": 80,
+      "riskTags": ["Preparedness"],
+      "safetyTip": "Maintain first aid kits at home."
+    },
+    "Fazilka": {
+      "riskLevel": "Medium",
+      "riskIntensity": "60%",
+      "riskDescription": "Border safety & flood awareness required.",
+      "preparednessScore": 65,
+      "riskTags": ["Flood", "Border"],
+      "safetyTip": "Stay alert to local border advisories."
+    },
+    "Ferozepur": {
+      "riskLevel": "High",
+      "riskIntensity": "70%",
+      "riskDescription": "Border region with frequent flood alerts.",
+      "preparednessScore": 60,
+      "riskTags": ["Flood", "Border"],
+      "safetyTip": "Know evacuation corridors."
+    },
+    "Gurdaspur": {
+      "riskLevel": "High",
+      "riskIntensity": "75%",
+      "riskDescription": "River flooding precaution necessary.",
+      "preparednessScore": 55,
+      "riskTags": ["Flood"],
+      "safetyTip": "Do not cross rivers during flood warnings."
+    },
+    "Hoshiarpur": {
+      "riskLevel": "High",
+      "riskIntensity": "70%",
+      "riskDescription": "Fire-prone due to forest cover.",
+      "preparednessScore": 60,
+      "riskTags": ["Fire"],
+      "safetyTip": "Avoid open flames in dry forests."
+    },
+    "Jalandhar": {
+      "riskLevel": "Medium",
+      "riskIntensity": "55%",
+      "riskDescription": "Urban fire & industrial risks.",
+      "preparednessScore": 65,
+      "riskTags": ["Fire", "Industrial"],
+      "safetyTip": "Keep fire extinguishers accessible."
+    },
+    "Kapurthala": {
+      "riskLevel": "Low",
+      "riskIntensity": "30%",
+      "riskDescription": "Moderate preparedness issues.",
+      "preparednessScore": 75,
+      "riskTags": ["Preparedness"],
+      "safetyTip": "Check emergency contacts twice yearly."
+    },
+    "Ludhiana": {
+      "riskLevel": "High",
+      "riskIntensity": "85%",
+      "riskDescription": "Industrial hub with frequent fire/chemical risks.",
+      "preparednessScore": 50,
+      "riskTags": ["Industrial", "Fire"],
+      "safetyTip": "Conduct regular fire drills in factories."
+    },
+    "Mansa": {
+      "riskLevel": "High",
+      "riskIntensity": "65%",
+      "riskDescription": "Heatwaves and crop-related risks.",
+      "preparednessScore": 55,
+      "riskTags": ["Heatwave", "Agriculture"],
+      "safetyTip": "Stay hydrated and monitor heat advisories."
+    },
+    "Moga": {
+      "riskLevel": "Medium",
+      "riskIntensity": "50%",
+      "riskDescription": "General preparedness needed.",
+      "preparednessScore": 70,
+      "riskTags": ["Preparedness"],
+      "safetyTip": "Keep two evacuation routes ready."
+    },
+    "Mohali": {
+      "riskLevel": "High",
+      "riskIntensity": "70%",
+      "riskDescription": "Urban flooding risks due to drainage issues.",
+      "preparednessScore": 55,
+      "riskTags": ["Flood"],
+      "safetyTip": "Avoid driving during heavy downpours."
+    },
+    "Muktsar": {
+      "riskLevel": "Medium",
+      "riskIntensity": "55%",
+      "riskDescription": "Agricultural flood risks.",
+      "preparednessScore": 65,
+      "riskTags": ["Flood"],
+      "safetyTip": "Prepare sandbags in flood season."
+    },
+    "Pathankot": {
+      "riskLevel": "High",
+      "riskIntensity": "80%",
+      "riskDescription": "Border + flood-prone zone.",
+      "preparednessScore": 50,
+      "riskTags": ["Flood", "Border"],
+      "safetyTip": "Keep ID and documents ready for evacuation."
+    },
+    "Patiala": {
+      "riskLevel": "Medium",
+      "riskIntensity": "50%",
+      "riskDescription": "Flood & health risks.",
+      "preparednessScore": 65,
+      "riskTags": ["Flood", "Health"],
+      "safetyTip": "Keep medicines and health kits stocked."
+    },
+    "Rupnagar": {
+      "riskLevel": "High",
+      "riskIntensity": "70%",
+      "riskDescription": "Landslide and fire hazards.",
+      "preparednessScore": 55,
+      "riskTags": ["Landslide", "Fire"],
+      "safetyTip": "Do not travel on unstable slopes."
+    },
+    "Sangrur": {
+      "riskLevel": "Medium",
+      "riskIntensity": "60%",
+      "riskDescription": "Heat & drought prone.",
+      "preparednessScore": 60,
+      "riskTags": ["Heatwave", "Drought"],
+      "safetyTip": "Conserve water during peak summer."
+    },
+    "ShahidBhagatSinghNagar": {
+      "riskLevel": "Medium",
+      "riskIntensity": "45%",
+      "riskDescription": "Preparedness gaps in schools & communities.",
+      "preparednessScore": 70,
+      "riskTags": ["Preparedness"],
+      "safetyTip": "Regularly practice emergency drills."
+    },
+    "TarnTaran": {
+      "riskLevel": "High",
+      "riskIntensity": "75%",
+      "riskDescription": "Flood readiness required.",
+      "preparednessScore": 55,
+      "riskTags": ["Flood"],
+      "safetyTip": "Evacuate early when flood alerts are issued."
+    }
+  }
