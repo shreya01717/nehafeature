@@ -1,16 +1,26 @@
 import { Toaster } from "@/components/ui/toaster"
 import { Toaster as Sonner } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css"
+import ModuleDetailWrapper from "./modules/ModuleDetailWrapper";
 
+// Pages
 import Index from "./pages/Index"
 import Auth from "./pages/Auth"
 import Dashboard from "./pages/Dashboard"
 import NotFound from "./pages/NotFound"
-import RiskMapPage from "./pages/RiskMapPage"   // ✅ New Page
+import RiskMapPage from "./pages/RiskMapPage"
+import ModuleDetail from "./modules/ModuleDetail"
+
+// Modules
+import ModulesPage from "./modules/ModulesPage"  // ✅ Make sure ModulesPage.tsx uses "export default ModulesPage"
+{/* Learning Modules */}
+
+
+import { ProgressProvider } from "./modules/ProgressContext"
 
 const queryClient = new QueryClient()
 
@@ -25,20 +35,29 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<Index />} />
-            <Route path="/auth" element={<Auth />} />
+        <ProgressProvider>
+          <BrowserRouter>
+            <Routes>
+              {/* Public Routes */}
+              <Route path="/" element={<Index />} />
+              <Route path="/auth" element={<Auth />} />
 
-            {/* Dashboard Routes */}
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/dashboard/maps" element={<RiskMapPage />} /> {/* ✅ Added */}
+              {/* Dashboard Routes */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/maps" element={<RiskMapPage />} />
 
-            {/* Catch-All */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+              {/* Learning Modules */}
+             <Route path="/modules" element={<ModulesPage />} />
+
+
+<Route path="/modules/:id" element={<ModuleDetailWrapper />} />
+
+
+              {/* Catch-All */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </ProgressProvider>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>

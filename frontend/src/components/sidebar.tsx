@@ -27,10 +27,11 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
+// ✅ Changed "Learning Modules" url to /modules
 const learningItems = [
   { title: "Overview", url: "/dashboard", icon: Home },
   { title: "Risk Maps", url: "/dashboard/maps", icon: Map },
-  { title: "Learning Modules", url: "/dashboard/learn", icon: BookOpen },
+  { title: "Learning Modules", url: "/modules", icon: BookOpen }, 
   { title: "Virtual Drills", url: "/dashboard/drills", icon: Shield },
   { title: "Achievements", url: "/dashboard/achievements", icon: Award },
 ]
