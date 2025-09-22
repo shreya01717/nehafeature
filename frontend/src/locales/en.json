@@ -1,6 +1,7 @@
 {
-    "nav": { "home": "Home", "about": "About", "features": "Features", "contact": "Contact" },
-    "hero": {
+  "nav": { "home": "Home", "about": "About", "features": "Features", "contact": "Contact" },
+
+  "hero": {
     "tagline": "Punjab's First Smart Disaster Platform",
     "cta": "Get Started",
     "prepare": "Prepare.",
@@ -10,64 +11,100 @@
     "startLearning": "Start Learning Now",
     "watchDemo": "Watch Demo",
     "features": {
-      "riskMaps": {
-        "title": "Punjab Risk Maps",
-        "desc": "Localized disaster intelligence"
-      },
-      "response": {
-        "title": "Emergency Response",
-        "desc": "Instant SOS & voice guidance"
-      },
-      "learning": {
-        "title": "Smart Learning",
-        "desc": "Gamified safety education"
-      },
-      "drills": {
-        "title": "Virtual Drills",
-        "desc": "Real-time practice scenarios"
-      }
+      "riskMaps": { "title": "Punjab Risk Maps", "desc": "Localized disaster intelligence" },
+      "response": { "title": "Emergency Response", "desc": "Instant SOS & voice guidance" },
+      "learning": { "title": "Smart Learning", "desc": "Gamified safety education" },
+      "drills": { "title": "Virtual Drills", "desc": "Real-time practice scenarios" }
     }
   },
-    "about": { "title": "About", "p": "This project builds preparedness across Punjab using community-led approaches." },
-    "features": { "one": "Community Training", "two": "Early Warning", "three": "Resource Mapping" },
-    "contact": { "title": "Contact", "email": "Email us at info@example.com" },
-    "auth": {
-      "welcomeBack": "Welcome Back",
-      "joinTitle": "Join RakshakApp",
-      "loginSubtitle": "Sign in to continue your disaster preparedness journey",
-      "registerSubtitle": "Start your journey towards disaster preparedness",
-      "fullName": "Full Name",
-      "fullNamePlaceholder": "Enter your full name",
-      "school": "School/College",
-      "schoolPlaceholder": "Enter your institution name",
-      "email": "Email",
-      "emailPlaceholder": "Enter your email",
-      "password": "Password",
-      "passwordPlaceholder": "Enter your password",
-      "signIn": "Sign In",
-      "createAccount": "Create Account",
-      "noAccount": "Don't have an account? Sign up",
-      "haveAccount": "Already have an account? Sign in"
+
+  "features": {
+    "heading1": "Complete Disaster",
+    "heading2": "Preparedness Ecosystem",
+    "subtitle": "From interactive learning to real emergency response - everything Punjab's students need for comprehensive disaster readiness.",
+
+    "feature1": {
+      "title": "Interactive Disaster Maps",
+      "desc": "Explore Punjab-specific flood zones, industrial hotspots, and fire-sensitive areas with real-time data visualization.",
+      "bullet1": "Region-specific risk assessment",
+      "bullet2": "Real-time weather integration",
+      "bullet3": "Historical disaster data"
     },
-    "dashboard": {
-      "welcomeBack": "Welcome back, {name}",
-      "learningProgress": "Learning Progress",
-      "badgesEarned": "Badges Earned",
-      "drillsCompleted": "Drills Completed",
-      "leaderboardRank": "Leaderboard Rank",
-      "emergencyTrainings": "Emergency Trainings",
-      "activeModules": "Active Learning Modules",
-      "moduleFloodSafety": "Punjab Flood Safety",
-      "moduleFloodSafetyDesc": "Interactive disaster mapping & response",
-      "moduleIndustrialSafety": "Industrial Safety Protocols",
-      "moduleIndustrialSafetyDesc": "Chemical leakage & emergency response",
-      "moduleEarthquake": "Earthquake Preparedness",
-      "moduleEarthquakeDesc": "Building safety & evacuation procedures",
-      "recentAchievements": "Recent Achievements",
-      "quickEmergencyAccess": "Quick Emergency Access",
-      "emergencySOS": "Emergency SOS",
-      "emergencyContacts": "Emergency Contacts",
-      "safetyGuidelines": "Safety Guidelines"
+    "feature2": {
+      "title": "Gamified Learning",
+      "desc": "Master disaster safety through engaging games, quizzes, and dynamic leaderboards with rewards and badges.",
+      "bullet1": "Progressive learning modules",
+      "bullet2": "Achievement system",
+      "bullet3": "Competitive leaderboards"
+    },
+    "feature3": {
+      "title": "Virtual Drill Engine",
+      "desc": "Practice earthquake, flood, and fire responses with teacher-triggered real-time drills for structured readiness.",
+      "bullet1": "Multi-scenario simulations",
+      "bullet2": "Performance tracking",
+      "bullet3": "Group coordination practice"
+    },
+    "emergency": {
+      "title": "Life-Saving Emergency Tools",
+      "tool1": { "title": "Voice-First Assistant", "desc": "Offline safety guidance" },
+      "tool2": { "title": "SOS Emergency Mode", "desc": "Flashlight, siren & alerts" },
+      "tool3": { "title": "Quick-Call Directory", "desc": "NDMA, SDMA, Fire, Police" },
+      "tool4": { "title": "AR Simulations", "desc": "Chemical leakage response" }
+    },
+    "innovation1": {
+      "title": "AI-Powered Learning",
+      "desc": "Adaptive learning paths that adjust to individual progress and learning styles for maximum retention.",
+      "tag1": "Multilingual",
+      "tag2": "Adaptive"
+    },
+    "innovation2": {
+      "title": "Admin Dashboard",
+      "desc": "Real-time analytics, student progress tracking, and institutional disaster readiness metrics.",
+      "tag1": "Analytics",
+      "tag2": "Reporting"
     }
+  },
+
+  "about": { "title": "About", "p": "This project builds preparedness across Punjab using community-led approaches." },
+  "contact": { "title": "Contact", "email": "Email us at info@example.com" },
+
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "joinTitle": "Join RakshakApp",
+    "loginSubtitle": "Sign in to continue your disaster preparedness journey",
+    "registerSubtitle": "Start your journey towards disaster preparedness",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "school": "School/College",
+    "schoolPlaceholder": "Enter your institution name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "noAccount": "Don't have an account? Sign up",
+    "haveAccount": "Already have an account? Sign in"
+  },
+
+  "dashboard": {
+    "welcomeBack": "Welcome back, {name}",
+    "learningProgress": "Learning Progress",
+    "badgesEarned": "Badges Earned",
+    "drillsCompleted": "Drills Completed",
+    "leaderboardRank": "Leaderboard Rank",
+    "emergencyTrainings": "Emergency Trainings",
+    "activeModules": "Active Learning Modules",
+    "moduleFloodSafety": "Punjab Flood Safety",
+    "moduleFloodSafetyDesc": "Interactive disaster mapping & response",
+    "moduleIndustrialSafety": "Industrial Safety Protocols",
+    "moduleIndustrialSafetyDesc": "Chemical leakage & emergency response",
+    "moduleEarthquake": "Earthquake Preparedness",
+    "moduleEarthquakeDesc": "Building safety & evacuation procedures",
+    "recentAchievements": "Recent Achievements",
+    "quickEmergencyAccess": "Quick Emergency Access",
+    "emergencySOS": "Emergency SOS",
+    "emergencyContacts": "Emergency Contacts",
+    "safetyGuidelines": "Safety Guidelines"
   }
-  
+}
