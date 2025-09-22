@@ -1,18 +1,5 @@
-import { useState } from "react"
-import { 
-  Home, 
-  Map, 
-  BookOpen, 
-  Shield, 
-  UserCog,
-  Settings,
-  AlertTriangle,
-  BarChart3,
-  Phone
-} from "lucide-react"
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { cn } from "@/lib/utils"
-
 import {
   Sidebar,
   SidebarContent,
@@ -25,7 +12,22 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-// ✅ Corrected URLs to match App.tsx routes
+import {
+  Home,
+  Map,
+  BookOpen,
+  Shield,
+  UserCog,
+  Settings,
+  AlertTriangle,
+  BarChart3,
+  Phone,
+  AlertCircle,
+  Droplet,
+  Zap,
+  Cloud
+} from "lucide-react"
+
 const learningItems = [
   { title: "Overview", url: "/dashboard", icon: Home },
   { title: "Risk Maps", url: "/dashboard/maps", icon: Map },
@@ -34,20 +36,8 @@ const learningItems = [
   { title: "Admin Dashboard", url: "/dashboard/admin", icon: UserCog },
 ]
 
-const emergencyItems = [
-  { title: "Emergency Tools", url: "/dashboard/emergency", icon: AlertTriangle },
-  { title: "Emergency Contacts", url: "/dashboard/contacts", icon: Phone },
-]
-
-const adminItems = [
-  { title: "Analytics", url: "/dashboard/analytics", icon: BarChart3 },
-  { title: "Settings", url: "/dashboard/settings", icon: Settings },
-]
-
-export function AppSidebar() {
+export function AppSidebar({ onSelectDisaster }: { onSelectDisaster: (disaster: string) => void }) {
   const { state } = useSidebar()
-  const location = useLocation()
-  const currentPath = location.pathname
   const isCollapsed = state === "collapsed"
 
   const getNavCls = ({ isActive }: { isActive: boolean }) =>
@@ -56,15 +46,8 @@ export function AppSidebar() {
       : "hover:bg-muted/50 hover:text-primary transition-all duration-200"
 
   return (
-    <Sidebar
-      className={cn(
-        "transition-all duration-300",
-        isCollapsed ? "w-16" : "w-64"
-      )}
-      collapsible="icon"
-    >
+    <Sidebar className={cn("transition-all duration-300", isCollapsed ? "w-16" : "w-64")} collapsible="icon">
       <SidebarContent className="bg-card/50 backdrop-blur-xl">
-        {/* Learning Section */}
         <SidebarGroup className="px-3 py-4">
           <SidebarGroupLabel className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
             Learning
@@ -76,11 +59,39 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild className="w-full">
                     <NavLink to={item.url} end className={getNavCls}>
                       <item.icon className="h-5 w-5 flex-shrink-0" />
-                      {!isCollapsed && (
-                        <span className="ml-3 text-sm font-medium">{item.title}</span>
-                      )}
+                      {!isCollapsed && <span className="ml-3 text-sm font-medium">{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
+
+                  {/* Submenu for Virtual Drills */}
+                  {item.title === "Virtual Drills" && !isCollapsed && (
+                    <div className="ml-8 mt-2 flex flex-col space-y-1">
+                      <button
+                        className="text-sm hover:text-primary flex items-center gap-2"
+                        onClick={() => onSelectDisaster("fire")}
+                      >
+                        <AlertCircle className="w-4 h-4" /> Fire Drill
+                      </button>
+                      <button
+                        className="text-sm hover:text-primary flex items-center gap-2"
+                        onClick={() => onSelectDisaster("flood")}
+                      >
+                        <Droplet className="w-4 h-4" /> Flood Drill
+                      </button>
+                      <button
+                        className="text-sm hover:text-primary flex items-center gap-2"
+                        onClick={() => onSelectDisaster("earthquake")}
+                      >
+                        <Zap className="w-4 h-4" /> Earthquake Drill
+                      </button>
+                      <button
+                        className="text-sm hover:text-primary flex items-center gap-2"
+                        onClick={() => onSelectDisaster("gas")}
+                      >
+                        <Cloud className="w-4 h-4" /> Gas Leak Drill
+                      </button>
+                    </div>
+                  )}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

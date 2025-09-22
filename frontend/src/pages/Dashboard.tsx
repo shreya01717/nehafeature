@@ -24,24 +24,32 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 
 export default function Dashboard() {
   const navigate = useNavigate()
-  const [activeSection, setActiveSection] = useState("overview")
   const { t } = useTranslation()
+  const [activeSection, setActiveSection] = useState("overview")
 
   const userStats = {
     name: "Priya Sharma",
     school: "Government Senior Secondary School, Ludhiana",
-    level: t("dashboard.level"), // translated
+    level: t("dashboard.level"),
     points: 2850,
     badges: 12,
     completedDrills: 8,
     learningProgress: 75
   }
 
+  // Dummy callback for sidebar disaster selection
+  const handleSelectDisaster = (disaster: string) => {
+    console.log("Selected disaster:", disaster)
+    // You can navigate or update state here
+  }
+
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-gradient-surface">
-        <AppSidebar />
-        
+        {/* Sidebar */}
+        <AppSidebar onSelectDisaster={handleSelectDisaster} />
+
+        {/* Main Content */}
         <div className="flex-1 flex flex-col">
           {/* Header */}
           <header className="bg-card/80 backdrop-blur-xl border-b border-border/50 sticky top-0 z-40">
@@ -74,40 +82,40 @@ export default function Dashboard() {
             </div>
           </header>
 
+          {/* Main Section */}
           <main className="flex-1 p-6 space-y-8">
-            {/* Welcome Section */}
-            <div className="animate-slide-up-1">
-              <Card className="glass-card hover-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h2 className="text-2xl font-bold mb-2">
-                        {t("dashboard.welcomeBack", { name: userStats.name })} 👋
-                      </h2>
-                      <p className="text-muted-foreground mb-4">{userStats.school}</p>
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center space-x-2">
-                          <Trophy className="h-4 w-4 text-primary" />
-                          <span className="text-sm font-medium">{userStats.level}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Target className="h-4 w-4 text-secondary-brand" />
-                          <span className="text-sm">{userStats.points} {t("dashboard.points")}</span>
-                        </div>
+            {/* Welcome Card */}
+            <Card className="glass-card hover-glow animate-slide-up-1">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-2">
+                      {t("dashboard.welcomeBack", { name: userStats.name })} 👋
+                    </h2>
+                    <p className="text-muted-foreground mb-4">{userStats.school}</p>
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-2">
+                        <Trophy className="h-4 w-4 text-primary" />
+                        <span className="text-sm font-medium">{userStats.level}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Target className="h-4 w-4 text-secondary-brand" />
+                        <span className="text-sm">{userStats.points} {t("dashboard.points")}</span>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold gradient-text mb-2">{userStats.learningProgress}%</div>
-                      <p className="text-sm text-muted-foreground mb-2">{t("dashboard.learningProgress")}</p>
-                      <Progress value={userStats.learningProgress} className="w-32" />
-                    </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold gradient-text mb-2">{userStats.learningProgress}%</div>
+                    <p className="text-sm text-muted-foreground mb-2">{t("dashboard.learningProgress")}</p>
+                    <Progress value={userStats.learningProgress} className="w-32" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {/* Badges */}
               <Card className="glass-card hover-glow animate-slide-up-1">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-xl mb-4">
@@ -118,6 +126,7 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
 
+              {/* Completed Drills */}
               <Card className="glass-card hover-glow animate-slide-up-2">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-secondary rounded-xl mb-4">
@@ -128,6 +137,7 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
 
+              {/* Leaderboard */}
               <Card className="glass-card hover-glow animate-slide-up-3">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-success rounded-xl mb-4">
@@ -138,6 +148,7 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
 
+              {/* Emergency Trainings */}
               <Card className="glass-card hover-glow animate-slide-up-1">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-emergency rounded-xl mb-4">
@@ -149,7 +160,7 @@ export default function Dashboard() {
               </Card>
             </div>
 
-            {/* Main Content Grid */}
+            {/* Main Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Learning Modules */}
               <div className="lg:col-span-2">
@@ -161,6 +172,7 @@ export default function Dashboard() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
+                    {/* Example Modules */}
                     <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl hover-lift cursor-pointer">
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
@@ -231,6 +243,7 @@ export default function Dashboard() {
                         <div className="text-xs text-muted-foreground">2 {t("dashboard.daysAgo")}</div>
                       </div>
                     </div>
+
                     <div className="flex items-center space-x-3 p-3 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg">
                       <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
                         <Shield className="h-4 w-4 text-white" />
