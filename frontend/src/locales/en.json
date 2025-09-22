@@ -1,0 +1,73 @@
+{
+    "nav": { "home": "Home", "about": "About", "features": "Features", "contact": "Contact" },
+    "hero": {
+    "tagline": "Punjab's First Smart Disaster Platform",
+    "cta": "Get Started",
+    "prepare": "Prepare.",
+    "protect": "Protect.",
+    "prevail": "Prevail.",
+    "description": "Punjab's most comprehensive disaster preparedness platform - combining interactive risk mapping, gamified safety education, virtual emergency drills, and life-saving tools for students across the state.",
+    "startLearning": "Start Learning Now",
+    "watchDemo": "Watch Demo",
+    "features": {
+      "riskMaps": {
+        "title": "Punjab Risk Maps",
+        "desc": "Localized disaster intelligence"
+      },
+      "response": {
+        "title": "Emergency Response",
+        "desc": "Instant SOS & voice guidance"
+      },
+      "learning": {
+        "title": "Smart Learning",
+        "desc": "Gamified safety education"
+      },
+      "drills": {
+        "title": "Virtual Drills",
+        "desc": "Real-time practice scenarios"
+      }
+    }
+  },
+    "about": { "title": "About", "p": "This project builds preparedness across Punjab using community-led approaches." },
+    "features": { "one": "Community Training", "two": "Early Warning", "three": "Resource Mapping" },
+    "contact": { "title": "Contact", "email": "Email us at info@example.com" },
+    "auth": {
+      "welcomeBack": "Welcome Back",
+      "joinTitle": "Join RakshakApp",
+      "loginSubtitle": "Sign in to continue your disaster preparedness journey",
+      "registerSubtitle": "Start your journey towards disaster preparedness",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "school": "School/College",
+      "schoolPlaceholder": "Enter your institution name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "signIn": "Sign In",
+      "createAccount": "Create Account",
+      "noAccount": "Don't have an account? Sign up",
+      "haveAccount": "Already have an account? Sign in"
+    },
+    "dashboard": {
+      "welcomeBack": "Welcome back, {name}",
+      "learningProgress": "Learning Progress",
+      "badgesEarned": "Badges Earned",
+      "drillsCompleted": "Drills Completed",
+      "leaderboardRank": "Leaderboard Rank",
+      "emergencyTrainings": "Emergency Trainings",
+      "activeModules": "Active Learning Modules",
+      "moduleFloodSafety": "Punjab Flood Safety",
+      "moduleFloodSafetyDesc": "Interactive disaster mapping & response",
+      "moduleIndustrialSafety": "Industrial Safety Protocols",
+      "moduleIndustrialSafetyDesc": "Chemical leakage & emergency response",
+      "moduleEarthquake": "Earthquake Preparedness",
+      "moduleEarthquakeDesc": "Building safety & evacuation procedures",
+      "recentAchievements": "Recent Achievements",
+      "quickEmergencyAccess": "Quick Emergency Access",
+      "emergencySOS": "Emergency SOS",
+      "emergencyContacts": "Emergency Contacts",
+      "safetyGuidelines": "Safety Guidelines"
+    }
+  }
+  

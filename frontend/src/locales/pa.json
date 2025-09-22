@@ -1,0 +1,73 @@
+{
+    "nav": { "home": "ਹੋਮ", "about": "ਸਾਡੇ ਬਾਰੇ", "features": "ਖਾਸੀਅਤਾਂ", "contact": "ਸੰਪਰਕ" },
+    "hero": {
+    "tagline": "ਪੰਜਾਬ ਦਾ ਪਹਿਲਾ ਸਮਾਰਟ ਆਫ਼ਤ ਪਲੇਟਫ਼ਾਰਮ",
+    "cta": "ਸ਼ੁਰੂ ਕਰੋ",
+    "prepare": "ਤਿਆਰੀ ਕਰੋ।",
+    "protect": "ਸੁਰੱਖਿਆ ਕਰੋ।",
+    "prevail": "ਜਿੱਤੋ।",
+    "description": "ਪੰਜਾਬ ਦਾ ਸਭ ਤੋਂ ਵਿਸਤ੍ਰਿਤ ਆਫ਼ਤ ਤਿਆਰੀ ਪਲੇਟਫ਼ਾਰਮ - ਇੰਟਰਐਕਟਿਵ ਰਿਸ਼ਕ ਮੈਪਿੰਗ, ਖੇਡਾਂ ਰਾਹੀਂ ਸੁਰੱਖਿਆ ਸਿੱਖਿਆ, ਵਰਚੁਅਲ ਐਮਰਜੈਂਸੀ ਡ੍ਰਿਲ ਅਤੇ ਸੂਬੇ ਭਰ ਦੇ ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਜਾਨ ਬਚਾਉਣ ਵਾਲੇ ਟੂਲ।",
+    "startLearning": "ਹੁਣੇ ਸਿੱਖਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "watchDemo": "ਡੈਮੋ ਵੇਖੋ",
+    "features": {
+      "riskMaps": {
+        "title": "ਪੰਜਾਬ ਰਿਸ਼ਕ ਮੈਪ",
+        "desc": "ਸਥਾਨਕ ਆਫ਼ਤ ਜਾਣਕਾਰੀ"
+      },
+      "response": {
+        "title": "ਐਮਰਜੈਂਸੀ ਰਿਸਪਾਂਸ",
+        "desc": "ਤੁਰੰਤ SOS ਅਤੇ ਵੌਇਸ ਗਾਈਡੈਂਸ"
+      },
+      "learning": {
+        "title": "ਸਮਾਰਟ ਲਰਨਿੰਗ",
+        "desc": "ਖੇਡਾਂ ਰਾਹੀਂ ਸੁਰੱਖਿਆ ਸਿੱਖਿਆ"
+      },
+      "drills": {
+        "title": "ਵਰਚੁਅਲ ਡ੍ਰਿਲ",
+        "desc": "ਰੀਅਲ-ਟਾਈਮ ਅਭਿਆਸ ਸਥਿਤੀਆਂ"
+      }
+    }
+  },
+    "about": { "title": "ਸਾਡੇ ਬਾਰੇ", "p": "ਇਹ ਪ੍ਰੋਜੈਕਟ ਸਮੁਦਾਇ-ਅਗਵਾਈ ਵਾਲੇ ਢੰਗ ਨਾਲ ਪੰਜਾਬ ਵਿੱਚ ਤਿਆਰੀ ਬਣਾਉਂਦਾ ਹੈ।" },
+    "features": { "one": "ਕਮਿਿਊਨਿਟੀ ਟ੍ਰੇਨਿੰਗ", "two": "ਅਗਾਹੀ ਪ੍ਰਣਾਲੀ", "three": "ਸੰਸਾਧਨ ਨਕਸ਼ਾ" },
+    "contact": { "title": "ਸੰਪਰਕ", "email": "ਸਾਨੂੰ info@example.com 'ਤੇ ਈਮੇਲ ਕਰੋ" },
+    "auth": {
+      "welcomeBack": "ਵਾਪਸੀ 'ਤੇ ਸੁਆਗਤ ਹੈ",
+      "joinTitle": "ਰੱਖਸ਼ਕਐਪ ਨਾਲ ਜੁੜੋ",
+      "loginSubtitle": "ਆਪਣੀ ਆਫ਼ਤ ਤਿਆਰੀ ਯਾਤਰਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਇਨ ਇਨ ਕਰੋ",
+      "registerSubtitle": "ਆਫ਼ਤ ਤਿਆਰੀ ਦੀ ਯਾਤਰਾ ਸ਼ੁਰੂ ਕਰੋ",
+      "fullName": "ਪੂਰਾ ਨਾਮ",
+      "fullNamePlaceholder": "ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+      "school": "ਸਕੂਲ/ਕਾਲਜ",
+      "schoolPlaceholder": "ਆਪਣੇ ਸੰਸਥਾਨ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+      "email": "ਈਮੇਲ",
+      "emailPlaceholder": "ਆਪਣਾ ਈਮੇਲ ਦਰਜ ਕਰੋ",
+      "password": "ਪਾਸਵਰਡ",
+      "passwordPlaceholder": "ਆਪਣਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
+      "signIn": "ਸਾਇਨ ਇਨ ਕਰੋ",
+      "createAccount": "ਖਾਤਾ ਬਣਾਓ",
+      "noAccount": "ਖਾਤਾ ਨਹੀਂ ਹੈ? ਸਾਇਨ ਅਪ ਕਰੋ",
+      "haveAccount": "ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ? ਸਾਇਨ ਇਨ ਕਰੋ"
+    },
+    "dashboard": {
+      "welcomeBack": "ਵਾਪਸੀ ਤੇ ਸੁਆਗਤ ਹੈ, {{name}}",
+      "learningProgress": "ਸਿੱਖਣ ਦੀ ਪ੍ਰਗਤੀ",
+      "badgesEarned": "ਹਾਸਲ ਕੀਤੇ ਬੈਜ",
+      "drillsCompleted": "ਪੂਰੇ ਕੀਤੇ ਅਭਿਆਸ",
+      "leaderboardRank": "ਲੀਡਰਬੋਰਡ ਰੈਂਕ",
+      "emergencyTrainings": "ਐਮਰਜੈਂਸੀ ਟ੍ਰੇਨਿੰਗ",
+      "activeModules": "ਸਕ੍ਰਿਆ ਲਰਨਿੰਗ ਮੋਡੀਊਲ",
+      "moduleFloodSafety": "ਪੰਜਾਬ ਬਾਢ ਸੁਰੱਖਿਆ",
+      "moduleFloodSafetyDesc": "ਇੰਟਰਐਕਟਿਵ ਆਫ਼ਤ ਮੈਪਿੰਗ ਅਤੇ ਪ੍ਰਤੀਕਿਰਿਆ",
+      "moduleIndustrialSafety": "ਉਦਯੋਗਿਕ ਸੁਰੱਖਿਆ ਪ੍ਰੋਟੋਕਾਲ",
+      "moduleIndustrialSafetyDesc": "ਰਸਾਇਣਕ ਰਿਸਾਅ ਅਤੇ ਐਮਰਜੈਂਸੀ ਪ੍ਰਤੀਕਿਰਿਆ",
+      "moduleEarthquake": "ਭੂਚਾਲ ਤਿਆਰੀ",
+      "moduleEarthquakeDesc": "ਇਮਾਰਤ ਸੁਰੱਖਿਆ ਅਤੇ ਖਾਲੀ ਕਰਨ ਦੀਆਂ ਪ੍ਰਕਿਰਿਆਵਾਂ",
+      "recentAchievements": "ਹਾਲੀਆ ਪ੍ਰਾਪਤੀਆਂ",
+      "quickEmergencyAccess": "ਤੁਰੰਤ ਐਮਰਜੈਂਸੀ ਪਹੁੰਚ",
+      "emergencySOS": "ਐਮਰਜੈਂਸੀ SOS",
+      "emergencyContacts": "ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ",
+      "safetyGuidelines": "ਸੁਰੱਖਿਆ ਨਿਯਮ"
+    }
+  }
+  

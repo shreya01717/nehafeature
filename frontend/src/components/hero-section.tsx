@@ -2,8 +2,12 @@ import { ArrowRight, Shield, Zap, Users, Map } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useNavigate } from "react-router-dom"
 import heroImage from "@/assets/hero-image.jpg"
+import { useTranslation } from "react-i18next"
+
 
 export function HeroSection() {
+  const { t } = useTranslation();  // 👈 hook
+
   const navigate = useNavigate()
 
   return (
@@ -20,22 +24,21 @@ export function HeroSection() {
         <div className="animate-slide-up-1">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 mb-8 hover-glow">
             <Shield className="h-4 w-4 text-primary mr-2" />
-            <span className="text-sm font-medium">Punjab's First Smart Disaster Platform</span>
+            <span className="text-sm font-medium">{t("hero.tagline")}</span>
           </div>
         </div>
 
         <div className="animate-slide-up-2">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Prepare.</span>{" "}
-            <span className="text-foreground">Protect.</span>{" "}
-            <span className="gradient-text">Prevail.</span>
+            <span className="gradient-text">{t("hero.prepare")}</span>{" "}
+            <span className="text-foreground">{t("hero.protect")}</span>{" "}
+            <span className="gradient-text">{t("hero.prevail")}</span>
           </h1>
         </div>
 
         <div className="animate-slide-up-3">
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-            Punjab's most comprehensive disaster preparedness platform - combining interactive risk mapping, 
-            gamified safety education, virtual emergency drills, and life-saving tools for students across the state.
+            {t("hero.description")}
           </p>
         </div>
 
@@ -46,14 +49,14 @@ export function HeroSection() {
               variant="hero"
               className="px-8 py-4 text-lg rounded-2xl group"
             >
-              Start Learning Now
+              {t("hero.startLearning")}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               variant="outline"
               className="px-8 py-4 text-lg rounded-2xl glass-card"
             >
-              Watch Demo
+              {t("hero.watchDemo")}
             </Button>
           </div>
         </div>
@@ -62,36 +65,23 @@ export function HeroSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in">
           <div className="glass-card p-6 rounded-2xl hover-glow">
             <Map className="h-8 w-8 text-primary mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Punjab Risk Maps</h3>
-            <p className="text-sm text-muted-foreground">Localized disaster intelligence</p>
+            <h3 className="font-semibold mb-2">{t("hero.features.riskMaps.title")}</h3>
+            <p className="text-sm text-muted-foreground">{t("hero.features.riskMaps.desc")}</p>
           </div>
           <div className="glass-card p-6 rounded-2xl hover-glow">
             <Zap className="h-8 w-8 text-secondary-brand mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Emergency Response</h3>
-            <p className="text-sm text-muted-foreground">Instant SOS & voice guidance</p>
+            <h3 className="font-semibold mb-2">{t("hero.features.response.title")}</h3>
+            <p className="text-sm text-muted-foreground">{t("hero.features.response.desc")}</p>
           </div>
           <div className="glass-card p-6 rounded-2xl hover-glow">
             <Users className="h-8 w-8 text-success mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Smart Learning</h3>
-            <p className="text-sm text-muted-foreground">Gamified safety education</p>
+            <h3 className="font-semibold mb-2">{t("hero.features.learning.title")}</h3>
+            <p className="text-sm text-muted-foreground">{t("hero.features.learning.desc")}</p>
           </div>
           <div className="glass-card p-6 rounded-2xl hover-glow">
             <Shield className="h-8 w-8 text-emergency mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Virtual Drills</h3>
-            <p className="text-sm text-muted-foreground">Real-time practice scenarios</p>
-          </div>
-        </div>
-
-        {/* Hero Image */}
-        <div className="mt-16 animate-fade-in">
-          <div className="relative max-w-5xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-20 animate-pulse-glow" />
-            <img 
-              src={heroImage} 
-              alt="RakshakApp - Punjab Disaster Preparedness Platform Interface"
-              className="relative w-full h-auto rounded-3xl shadow-glow hover:shadow-[var(--shadow-glow)] transition-all duration-700 hover:scale-[1.02]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/10 to-transparent rounded-3xl" />
+            <h3 className="font-semibold mb-2">{t("hero.features.drills.title")}</h3>
+            <p className="text-sm text-muted-foreground">{t("hero.features.drills.desc")}</p>
           </div>
         </div>
       </div>
