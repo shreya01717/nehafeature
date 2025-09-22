@@ -6,14 +6,15 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useNavigate } from "react-router-dom"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useTranslation } from "react-i18next"   // 👈 added
 
 export default function Auth() {
   const [isLogin, setIsLogin] = useState(true)
   const navigate = useNavigate()
+  const { t } = useTranslation()   // 👈 translation hook
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate auth success and navigate to dashboard
     navigate("/dashboard")
   }
 
@@ -39,7 +40,9 @@ export default function Auth() {
           <div className="p-2 bg-gradient-ocean rounded-lg">
             <Shield className="h-5 w-5 text-white" />
           </div>
-          <span className="font-bold bg-gradient-to-r from-primary to-secondary-brand bg-clip-text text-transparent">RakshakApp</span>
+          <span className="font-bold bg-gradient-to-r from-primary to-secondary-brand bg-clip-text text-transparent">
+            RakshakApp
+          </span>
         </div>
       </div>
 
@@ -54,13 +57,10 @@ export default function Auth() {
             <Shield className="h-8 w-8 text-white" />
           </div>
           <CardTitle className="text-2xl font-bold">
-            {isLogin ? "Welcome Back" : "Join RakshakApp"}
+            {isLogin ? t("auth.welcomeBack") : t("auth.joinTitle")}
           </CardTitle>
           <p className="text-muted-foreground">
-            {isLogin 
-              ? "Sign in to continue your disaster preparedness journey" 
-              : "Start your journey towards disaster preparedness"
-            }
+            {isLogin ? t("auth.loginSubtitle") : t("auth.registerSubtitle")}
           </p>
         </CardHeader>
 
@@ -68,12 +68,12 @@ export default function Auth() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {!isLogin && (
               <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
+                <Label htmlFor="name">{t("auth.fullName")}</Label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="name"
-                    placeholder="Enter your full name"
+                    placeholder={t("auth.fullNamePlaceholder") as string}
                     className="pl-10 h-12 rounded-xl"
                     required
                   />
@@ -83,12 +83,12 @@ export default function Auth() {
 
             {!isLogin && (
               <div className="space-y-2">
-                <Label htmlFor="school">School/College</Label>
+                <Label htmlFor="school">{t("auth.school")}</Label>
                 <div className="relative">
                   <School className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="school"
-                    placeholder="Enter your institution name"
+                    placeholder={t("auth.schoolPlaceholder") as string}
                     className="pl-10 h-12 rounded-xl"
                     required
                   />
@@ -97,13 +97,13 @@ export default function Auth() {
             )}
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t("auth.email")}</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
                   id="email"
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t("auth.emailPlaceholder") as string}
                   className="pl-10 h-12 rounded-xl"
                   required
                 />
@@ -111,13 +111,13 @@ export default function Auth() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">{t("auth.password")}</Label>
               <div className="relative">
                 <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
                   id="password"
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder={t("auth.passwordPlaceholder") as string}
                   className="pl-10 h-12 rounded-xl"
                   required
                 />
@@ -129,7 +129,7 @@ export default function Auth() {
               variant="hero"
               className="w-full h-12 text-lg rounded-xl"
             >
-              {isLogin ? "Sign In" : "Create Account"}
+              {isLogin ? t("auth.signIn") : t("auth.createAccount")}
             </Button>
 
             <div className="text-center">
@@ -139,10 +139,7 @@ export default function Auth() {
                 onClick={() => setIsLogin(!isLogin)}
                 className="text-muted-foreground hover:text-primary"
               >
-                {isLogin 
-                  ? "Don't have an account? Sign up" 
-                  : "Already have an account? Sign in"
-                }
+                {isLogin ? t("auth.noAccount") : t("auth.haveAccount")}
               </Button>
             </div>
           </form>

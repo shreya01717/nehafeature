@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
+
 import { 
   Map, 
   Award, 
@@ -7,13 +9,10 @@ import {
   BookOpen, 
   Shield, 
   Bell,
-  Settings,
   LogOut,
-  User,
   Target,
   Zap,
-  Trophy,
-  Menu
+  Trophy
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -26,11 +25,12 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 export default function Dashboard() {
   const navigate = useNavigate()
   const [activeSection, setActiveSection] = useState("overview")
+  const { t } = useTranslation()
 
   const userStats = {
     name: "Priya Sharma",
     school: "Government Senior Secondary School, Ludhiana",
-    level: "Emergency Responder",
+    level: t("dashboard.level"), // translated
     points: 2850,
     badges: 12,
     completedDrills: 8,
@@ -50,9 +50,9 @@ export default function Dashboard() {
                 <SidebarTrigger className="hover:bg-muted/50 hover:text-primary" />
                 <div>
                   <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary-brand bg-clip-text text-transparent">
-                    RakshakApp Dashboard
+                    {t("dashboard.title")}
                   </h1>
-                  <p className="text-sm text-muted-foreground">Student Learning Platform</p>
+                  <p className="text-sm text-muted-foreground">{t("dashboard.subtitle")}</p>
                 </div>
               </div>
 
@@ -81,7 +81,9 @@ export default function Dashboard() {
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h2 className="text-2xl font-bold mb-2">Welcome back, {userStats.name}! 👋</h2>
+                      <h2 className="text-2xl font-bold mb-2">
+                        {t("dashboard.welcomeBack", { name: userStats.name })} 👋
+                      </h2>
                       <p className="text-muted-foreground mb-4">{userStats.school}</p>
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-2">
@@ -90,13 +92,13 @@ export default function Dashboard() {
                         </div>
                         <div className="flex items-center space-x-2">
                           <Target className="h-4 w-4 text-secondary-brand" />
-                          <span className="text-sm">{userStats.points} points</span>
+                          <span className="text-sm">{userStats.points} {t("dashboard.points")}</span>
                         </div>
                       </div>
                     </div>
                     <div className="text-right">
                       <div className="text-3xl font-bold gradient-text mb-2">{userStats.learningProgress}%</div>
-                      <p className="text-sm text-muted-foreground mb-2">Learning Progress</p>
+                      <p className="text-sm text-muted-foreground mb-2">{t("dashboard.learningProgress")}</p>
                       <Progress value={userStats.learningProgress} className="w-32" />
                     </div>
                   </div>
@@ -112,7 +114,7 @@ export default function Dashboard() {
                     <Award className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-2xl font-bold mb-1">{userStats.badges}</div>
-                  <p className="text-sm text-muted-foreground">Badges Earned</p>
+                  <p className="text-sm text-muted-foreground">{t("dashboard.badgesEarned")}</p>
                 </CardContent>
               </Card>
 
@@ -122,7 +124,7 @@ export default function Dashboard() {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-2xl font-bold mb-1">{userStats.completedDrills}</div>
-                  <p className="text-sm text-muted-foreground">Drills Completed</p>
+                  <p className="text-sm text-muted-foreground">{t("dashboard.drillsCompleted")}</p>
                 </CardContent>
               </Card>
 
@@ -132,7 +134,7 @@ export default function Dashboard() {
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-2xl font-bold mb-1">156</div>
-                  <p className="text-sm text-muted-foreground">Leaderboard Rank</p>
+                  <p className="text-sm text-muted-foreground">{t("dashboard.leaderboardRank")}</p>
                 </CardContent>
               </Card>
 
@@ -142,7 +144,7 @@ export default function Dashboard() {
                     <Zap className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-2xl font-bold mb-1">5</div>
-                  <p className="text-sm text-muted-foreground">Emergency Trainings</p>
+                  <p className="text-sm text-muted-foreground">{t("dashboard.emergencyTrainings")}</p>
                 </CardContent>
               </Card>
             </div>
@@ -155,7 +157,7 @@ export default function Dashboard() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <BookOpen className="h-5 w-5 mr-2" />
-                      Active Learning Modules
+                      {t("dashboard.activeModules")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -165,13 +167,13 @@ export default function Dashboard() {
                           <Map className="h-5 w-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="font-semibold">Punjab Flood Safety</h3>
-                          <p className="text-sm text-muted-foreground">Interactive disaster mapping & response</p>
+                          <h3 className="font-semibold">{t("dashboard.moduleFloodSafety")}</h3>
+                          <p className="text-sm text-muted-foreground">{t("dashboard.moduleFloodSafetyDesc")}</p>
                         </div>
                       </div>
                       <div className="text-right">
                         <div className="text-lg font-bold text-success">85%</div>
-                        <div className="text-xs text-muted-foreground">Complete</div>
+                        <div className="text-xs text-muted-foreground">{t("dashboard.complete")}</div>
                       </div>
                     </div>
 
@@ -181,13 +183,13 @@ export default function Dashboard() {
                           <AlertTriangle className="h-5 w-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="font-semibold">Industrial Safety Protocols</h3>
-                          <p className="text-sm text-muted-foreground">Chemical leakage & emergency response</p>
+                          <h3 className="font-semibold">{t("dashboard.moduleIndustrialSafety")}</h3>
+                          <p className="text-sm text-muted-foreground">{t("dashboard.moduleIndustrialSafetyDesc")}</p>
                         </div>
                       </div>
                       <div className="text-right">
                         <div className="text-lg font-bold text-secondary-brand">45%</div>
-                        <div className="text-xs text-muted-foreground">In Progress</div>
+                        <div className="text-xs text-muted-foreground">{t("dashboard.inProgress")}</div>
                       </div>
                     </div>
 
@@ -197,12 +199,12 @@ export default function Dashboard() {
                           <Shield className="h-5 w-5 text-muted-foreground" />
                         </div>
                         <div>
-                          <h3 className="font-semibold">Earthquake Preparedness</h3>
-                          <p className="text-sm text-muted-foreground">Building safety & evacuation procedures</p>
+                          <h3 className="font-semibold">{t("dashboard.moduleEarthquake")}</h3>
+                          <p className="text-sm text-muted-foreground">{t("dashboard.moduleEarthquakeDesc")}</p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-lg font-bold text-muted-foreground">Locked</div>
+                        <div className="text-lg font-bold text-muted-foreground">{t("dashboard.locked")}</div>
                       </div>
                     </div>
                   </CardContent>
@@ -216,7 +218,7 @@ export default function Dashboard() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Trophy className="h-5 w-5 mr-2" />
-                      Recent Achievements
+                      {t("dashboard.recentAchievements")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
@@ -225,8 +227,8 @@ export default function Dashboard() {
                         <Award className="h-4 w-4 text-white" />
                       </div>
                       <div>
-                        <div className="font-semibold text-sm">Flood Safety Expert</div>
-                        <div className="text-xs text-muted-foreground">2 days ago</div>
+                        <div className="font-semibold text-sm">{t("dashboard.achievementFloodSafety")}</div>
+                        <div className="text-xs text-muted-foreground">2 {t("dashboard.daysAgo")}</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg">
@@ -234,8 +236,8 @@ export default function Dashboard() {
                         <Shield className="h-4 w-4 text-white" />
                       </div>
                       <div>
-                        <div className="font-semibold text-sm">Virtual Drill Master</div>
-                        <div className="text-xs text-muted-foreground">1 week ago</div>
+                        <div className="font-semibold text-sm">{t("dashboard.achievementDrillMaster")}</div>
+                        <div className="text-xs text-muted-foreground">1 {t("dashboard.weekAgo")}</div>
                       </div>
                     </div>
                   </CardContent>
@@ -246,22 +248,19 @@ export default function Dashboard() {
                   <CardHeader>
                     <CardTitle className="flex items-center text-emergency">
                       <AlertTriangle className="h-5 w-5 mr-2" />
-                      Quick Emergency Access
+                      {t("dashboard.quickEmergencyAccess")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <Button 
-                      variant="emergency"
-                      className="w-full text-left justify-start"
-                    >
+                    <Button variant="emergency" className="w-full text-left justify-start">
                       <AlertTriangle className="h-4 w-4 mr-2" />
-                      Emergency SOS
+                      {t("dashboard.emergencySOS")}
                     </Button>
                     <Button variant="outline" className="w-full text-left justify-start hover-lift">
-                      Emergency Contacts
+                      {t("dashboard.emergencyContacts")}
                     </Button>
                     <Button variant="outline" className="w-full text-left justify-start hover-lift">
-                      Safety Guidelines
+                      {t("dashboard.safetyGuidelines")}
                     </Button>
                   </CardContent>
                 </Card>

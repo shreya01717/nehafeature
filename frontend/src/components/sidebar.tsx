@@ -6,10 +6,12 @@ import {
   Shield, 
   Award, 
   Users, 
+  UserCog,
   Settings,
   AlertTriangle,
   BarChart3,
-  Phone
+  Phone,
+  LayoutDashboardIcon
 } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
@@ -33,7 +35,7 @@ const learningItems = [
   { title: "Risk Maps", url: "/dashboard/maps", icon: Map },
   { title: "Learning Modules", url: "/modules", icon: BookOpen }, 
   { title: "Virtual Drills", url: "/dashboard/drills", icon: Shield },
-  { title: "Achievements", url: "/dashboard/achievements", icon: Award },
+  { title: "Admin Dashboard", url: "/dashboard/admin", icon: UserCog},
 ]
 
 const emergencyItems = [

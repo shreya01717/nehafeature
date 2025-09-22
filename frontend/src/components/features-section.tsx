@@ -1,143 +1,183 @@
+import { useTranslation } from "react-i18next"
+import { motion } from "framer-motion"
 import { 
   Map, 
   Gamepad2, 
   Shield, 
   Zap, 
   Globe, 
-  Award,
   Users,
   Brain,
-  Phone,
-  BookOpen 
+  Phone
 } from "lucide-react"
 
 export function FeaturesSection() {
+  const { t } = useTranslation()
+
   return (
     <section id="features" className="py-24 bg-gradient-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up-1">
+        
+        {/* Heading */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Complete Disaster</span>{" "}
-            <span className="text-foreground">Preparedness Ecosystem</span>
+            <span className="gradient-text">{t("features.heading1")}</span>{" "}
+            <span className="text-foreground">{t("features.heading2")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From interactive learning to real emergency response - everything Punjab's students need for comprehensive disaster readiness.
+            {t("features.subtitle")}
           </p>
-        </div>
+        </motion.div>
 
-        {/* Main Features Grid */}
+        {/* Main Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="glass-card p-8 rounded-3xl hover-glow animate-slide-up-1">
+          
+          {/* Feature 1 */}
+          <motion.div 
+            className="glass-card p-8 rounded-3xl hover-glow"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6">
               <Map className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4">Interactive Disaster Maps</h3>
-            <p className="text-muted-foreground mb-4">
-              Explore Punjab-specific flood zones, industrial hotspots, and fire-sensitive areas with real-time data visualization.
-            </p>
+            <h3 className="text-2xl font-bold mb-4">{t("features.feature1.title")}</h3>
+            <p className="text-muted-foreground mb-4">{t("features.feature1.desc")}</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Region-specific risk assessment</li>
-              <li>• Real-time weather integration</li>
-              <li>• Historical disaster data</li>
+              <li>• {t("features.feature1.bullet1")}</li>
+              <li>• {t("features.feature1.bullet2")}</li>
+              <li>• {t("features.feature1.bullet3")}</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="glass-card p-8 rounded-3xl hover-glow animate-slide-up-2">
+          {/* Feature 2 */}
+          <motion.div 
+            className="glass-card p-8 rounded-3xl hover-glow"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="w-16 h-16 bg-gradient-secondary rounded-2xl flex items-center justify-center mb-6">
               <Gamepad2 className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4">Gamified Learning</h3>
-            <p className="text-muted-foreground mb-4">
-              Master disaster safety through engaging games, quizzes, and dynamic leaderboards with rewards and badges.
-            </p>
+            <h3 className="text-2xl font-bold mb-4">{t("features.feature2.title")}</h3>
+            <p className="text-muted-foreground mb-4">{t("features.feature2.desc")}</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Progressive learning modules</li>
-              <li>• Achievement system</li>
-              <li>• Competitive leaderboards</li>
+              <li>• {t("features.feature2.bullet1")}</li>
+              <li>• {t("features.feature2.bullet2")}</li>
+              <li>• {t("features.feature2.bullet3")}</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="glass-card p-8 rounded-3xl hover-glow animate-slide-up-3">
+          {/* Feature 3 */}
+          <motion.div 
+            className="glass-card p-8 rounded-3xl hover-glow"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <div className="w-16 h-16 bg-gradient-success rounded-2xl flex items-center justify-center mb-6">
               <Shield className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4">Virtual Drill Engine</h3>
-            <p className="text-muted-foreground mb-4">
-              Practice earthquake, flood, and fire responses with teacher-triggered real-time drills for structured readiness.
-            </p>
+            <h3 className="text-2xl font-bold mb-4">{t("features.feature3.title")}</h3>
+            <p className="text-muted-foreground mb-4">{t("features.feature3.desc")}</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Multi-scenario simulations</li>
-              <li>• Performance tracking</li>
-              <li>• Group coordination practice</li>
+              <li>• {t("features.feature3.bullet1")}</li>
+              <li>• {t("features.feature3.bullet2")}</li>
+              <li>• {t("features.feature3.bullet3")}</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Emergency Tools Section */}
-        <div className="glass-card p-8 rounded-3xl hover-glow mb-16 animate-slide-up-1">
+        {/* Emergency Tools */}
+        <motion.div 
+          className="glass-card p-8 rounded-3xl hover-glow mb-16"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <div className="flex items-center justify-center mb-8">
             <div className="w-20 h-20 bg-gradient-emergency rounded-3xl flex items-center justify-center">
               <Zap className="h-10 w-10 text-white" />
             </div>
           </div>
-          <h3 className="text-3xl font-bold text-center mb-6">Life-Saving Emergency Tools</h3>
+          <h3 className="text-3xl font-bold text-center mb-6">{t("features.emergency.title")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-4">
               <Phone className="h-8 w-8 text-emergency mx-auto mb-3" />
-              <h4 className="font-semibold mb-2">Voice-First Assistant</h4>
-              <p className="text-sm text-muted-foreground">Offline safety guidance</p>
+              <h4 className="font-semibold mb-2">{t("features.emergency.tool1.title")}</h4>
+              <p className="text-sm text-muted-foreground">{t("features.emergency.tool1.desc")}</p>
             </div>
             <div className="text-center p-4">
               <Zap className="h-8 w-8 text-emergency mx-auto mb-3" />
-              <h4 className="font-semibold mb-2">SOS Emergency Mode</h4>
-              <p className="text-sm text-muted-foreground">Flashlight, siren & alerts</p>
+              <h4 className="font-semibold mb-2">{t("features.emergency.tool2.title")}</h4>
+              <p className="text-sm text-muted-foreground">{t("features.emergency.tool2.desc")}</p>
             </div>
             <div className="text-center p-4">
               <Phone className="h-8 w-8 text-emergency mx-auto mb-3" />
-              <h4 className="font-semibold mb-2">Quick-Call Directory</h4>
-              <p className="text-sm text-muted-foreground">NDMA, SDMA, Fire, Police</p>
+              <h4 className="font-semibold mb-2">{t("features.emergency.tool3.title")}</h4>
+              <p className="text-sm text-muted-foreground">{t("features.emergency.tool3.desc")}</p>
             </div>
             <div className="text-center p-4">
               <Globe className="h-8 w-8 text-emergency mx-auto mb-3" />
-              <h4 className="font-semibold mb-2">AR Simulations</h4>
-              <p className="text-sm text-muted-foreground">Chemical leakage response</p>
+              <h4 className="font-semibold mb-2">{t("features.emergency.tool4.title")}</h4>
+              <p className="text-sm text-muted-foreground">{t("features.emergency.tool4.desc")}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Innovation Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="glass-card p-8 rounded-3xl hover-glow animate-slide-up-2">
+          <motion.div 
+            className="glass-card p-8 rounded-3xl hover-glow"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mr-4">
                 <Brain className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold">AI-Powered Learning</h3>
+              <h3 className="text-2xl font-bold">{t("features.innovation1.title")}</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
-              Adaptive learning paths that adjust to individual progress and learning styles for maximum retention.
-            </p>
+            <p className="text-muted-foreground mb-4">{t("features.innovation1.desc")}</p>
             <div className="flex items-center space-x-4 text-sm">
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">Multilingual</span>
-              <span className="px-3 py-1 bg-secondary-brand/10 text-secondary-brand rounded-full">Adaptive</span>
+              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">{t("features.innovation1.tag1")}</span>
+              <span className="px-3 py-1 bg-secondary-brand/10 text-secondary-brand rounded-full">{t("features.innovation1.tag2")}</span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="glass-card p-8 rounded-3xl hover-glow animate-slide-up-3">
+          <motion.div 
+            className="glass-card p-8 rounded-3xl hover-glow"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-gradient-success rounded-xl flex items-center justify-center mr-4">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold">Admin Dashboard</h3>
+              <h3 className="text-2xl font-bold">{t("features.innovation2.title")}</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
-              Real-time analytics, student progress tracking, and institutional disaster readiness metrics.
-            </p>
+            <p className="text-muted-foreground mb-4">{t("features.innovation2.desc")}</p>
             <div className="flex items-center space-x-4 text-sm">
-              <span className="px-3 py-1 bg-success/10 text-success rounded-full">Analytics</span>
-              <span className="px-3 py-1 bg-emergency/10 text-emergency rounded-full">Reporting</span>
+              <span className="px-3 py-1 bg-success/10 text-success rounded-full">{t("features.innovation2.tag1")}</span>
+              <span className="px-3 py-1 bg-emergency/10 text-emergency rounded-full">{t("features.innovation2.tag2")}</span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

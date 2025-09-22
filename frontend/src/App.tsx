@@ -12,15 +12,7 @@ import Index from "./pages/Index"
 import Auth from "./pages/Auth"
 import Dashboard from "./pages/Dashboard"
 import NotFound from "./pages/NotFound"
-import RiskMapPage from "./pages/RiskMapPage"
-import ModuleDetail from "./modules/ModuleDetail"
-
-// Modules
-import ModulesPage from "./modules/ModulesPage"  // ✅ Make sure ModulesPage.tsx uses "export default ModulesPage"
-{/* Learning Modules */}
-
-
-import { ProgressProvider } from "./modules/ProgressContext"
+import RiskMapPage from "./pages/RiskMapPage"   // ✅ New Page
 
 const queryClient = new QueryClient()
 
@@ -42,16 +34,9 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/auth" element={<Auth />} />
 
-              {/* Dashboard Routes */}
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/dashboard/maps" element={<RiskMapPage />} />
-
-              {/* Learning Modules */}
-             <Route path="/modules" element={<ModulesPage />} />
-
-
-<Route path="/modules/:id" element={<ModuleDetailWrapper />} />
-
+            {/* Dashboard Routes */}
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/maps" element={<RiskMapPage />} /> {/* ✅ Added */}
 
               {/* Catch-All */}
               <Route path="*" element={<NotFound />} />
