@@ -80,25 +80,33 @@ export default function ModuleDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 p-4 flex flex-col gap-6">
-      {/* Module Heading */}
-      <h1 className="text-4xl font-extrabold text-center text-blue-700 dark:text-blue-400 mb-4">
-        {module.title[language]}
-      </h1>
+  <div className="min-h-screen bg-gray-100 dark:bg-gray-950 p-4 flex flex-col gap-6">
+    
+    {/* Back Button */}
+    <button
+      className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-max"
+      onClick={() => navigate("/dashboard/modules")} // Ensure this matches your modules list route
+    >
+      ← Back to Modules
+    </button>
 
-      {/* Language Switcher */}
-      <div className="flex justify-center gap-3 mb-6">
-        {["en", "hi", "pa"].map((lang) => (
-          <Button
-            key={lang}
-            variant={language === lang ? "default" : "outline"}
-            onClick={() => setLanguage(lang as "en" | "hi" | "pa")}
-          >
-            {lang.toUpperCase()}
-          </Button>
-        ))}
-      </div>
+    {/* Module Heading */}
+    <h1 className="text-4xl font-extrabold text-center text-blue-700 dark:text-blue-400 mb-4">
+      {module.title[language]}
+    </h1>
 
+    {/* Language Switcher */}
+    <div className="flex justify-center gap-3 mb-6">
+      {["en", "hi", "pa"].map((lang) => (
+        <Button
+          key={lang}
+          variant={language === lang ? "default" : "outline"}
+          onClick={() => setLanguage(lang as "en" | "hi" | "pa")}
+        >
+          {lang.toUpperCase()}
+        </Button>
+      ))}
+    </div>
       <Card className="flex-1 shadow-2xl rounded-3xl overflow-hidden max-w-5xl mx-auto w-full">
         <CardContent className="p-8 flex flex-col gap-6">
           {/* Reading Step */}
@@ -200,12 +208,13 @@ export default function ModuleDetail() {
                   </Button>
                 )}
 
-                <Button
-                  onClick={() => navigate("/modules")}
-                  className="bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold rounded-lg"
-                >
-                  Back to Modules
-                </Button>
+               <Button
+  onClick={() => navigate("/dashboard/modules")} // <-- Corrected path
+  className="bg-blue-600 hover:bg-blue-700 text-white py-3 font-semibold rounded-lg"
+>
+  Back to Modules
+</Button>
+
               </div>
             </div>
           )}

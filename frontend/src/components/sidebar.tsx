@@ -4,14 +4,11 @@ import {
   Map, 
   BookOpen, 
   Shield, 
-  Award, 
-  Users, 
   UserCog,
   Settings,
   AlertTriangle,
   BarChart3,
-  Phone,
-  LayoutDashboardIcon
+  Phone
 } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
@@ -25,17 +22,16 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar"
 
-// ✅ Changed "Learning Modules" url to /modules
+// ✅ Corrected URLs to match App.tsx routes
 const learningItems = [
   { title: "Overview", url: "/dashboard", icon: Home },
   { title: "Risk Maps", url: "/dashboard/maps", icon: Map },
-  { title: "Learning Modules", url: "/modules", icon: BookOpen }, 
+  { title: "Learning Modules", url: "/dashboard/modules", icon: BookOpen },
   { title: "Virtual Drills", url: "/dashboard/drills", icon: Shield },
-  { title: "Admin Dashboard", url: "/dashboard/admin", icon: UserCog},
+  { title: "Admin Dashboard", url: "/dashboard/admin", icon: UserCog },
 ]
 
 const emergencyItems = [
@@ -54,7 +50,6 @@ export function AppSidebar() {
   const currentPath = location.pathname
   const isCollapsed = state === "collapsed"
 
-  const isActive = (path: string) => currentPath === path
   const getNavCls = ({ isActive }: { isActive: boolean }) =>
     isActive 
       ? "bg-gradient-to-r from-primary/10 to-secondary-brand/10 text-primary border-r-2 border-primary font-medium" 

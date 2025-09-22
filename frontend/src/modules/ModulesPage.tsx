@@ -10,6 +10,10 @@ export default function ModulesPage() {
   const navigate = useNavigate();
   const { completedModules } = useProgress();
 
+  const handleNavigate = (id: number) => {
+    navigate(`/dashboard/modules/${id}?lang=${language}`);
+  };
+
   return (
     <div className="p-6 min-h-screen bg-gray-100 dark:bg-gray-950">
       {/* Header */}
@@ -34,11 +38,13 @@ export default function ModulesPage() {
           return (
             <div
               key={module.id}
-              onClick={() => navigate(`/modules/${module.id}?lang=${language}`)}
               className="relative rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-900 cursor-pointer transform transition-transform hover:scale-105 hover:shadow-2xl"
             >
               {/* Image */}
-              <div className="relative h-40 overflow-hidden">
+              <div
+                className="relative h-40 overflow-hidden"
+                onClick={() => handleNavigate(module.id)}
+              >
                 <img
                   src={module.image}
                   alt={module.title[language]}
@@ -55,7 +61,10 @@ export default function ModulesPage() {
                 <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
                   {module.description[language]}
                 </p>
-                <Button className="mt-2 w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg">
+                <Button
+                  onClick={() => handleNavigate(module.id)}
+                  className="mt-2 w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg"
+                >
                   View Module
                 </Button>
               </div>

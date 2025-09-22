@@ -14,4 +14,26 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    exclude: [
+      "canvg",
+      "rgbcolor",
+      "raf",
+      "stackblur-canvas",
+      "svg-pathdata",
+      "core-js"
+    ],
+  },
+  build: {
+    rollupOptions: {
+      external: [
+        "canvg",
+        "rgbcolor",
+        "raf",
+        "stackblur-canvas",
+        "svg-pathdata",
+        "core-js"
+      ],
+    },
+  },
 }));
